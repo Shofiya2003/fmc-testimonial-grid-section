@@ -1,0 +1,247 @@
+/* ### Primary */
+*{
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%); 
+    --White: hsl(0, 0%, 100%);
+
+    /* ### Neutral */
+
+--Lightgray: hsl(0, 0%, 81%);
+--Lightgrayishblue: hsl(210, 46%, 95%)
+}
+
+body{
+    background-color: var(--Lightgrayishblue);
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.testimonial-container{
+    margin:97px 30px 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,186px);
+    grid-template-areas: 
+    "test-1 test-1 test-2 test-3"
+    "test-1  test-1 test-2 test-3"
+    "test-4 test-5 test-5 test-3"
+    "test-4 test-5 test-5 test-3"
+    ;
+
+    gap: 30px;
+    
+}
+
+.testimonial{
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+#testimonial-1::before{
+    content: '';
+    background: url(images/bg-pattern-quotation.svg) no-repeat;
+    height: 144px;
+    width: 150px;
+    position: absolute;
+    left: 527px;
+    z-index: 20;
+    top: 113px;
+    background-size: 135px;
+    opacity: 40%;
+   
+
+}
+#testimonial-1{
+    grid-area: test-1;
+    background-color: var(--Moderateviolet);
+    
+}
+
+#testimonial-1 .testimonial-body .text_top{
+    position: relative;
+    z-index: 100;
+    width: 103%;
+    bottom:4px;
+}
+
+#testimonial-2{
+    grid-area: test-2;
+    background-color: var(--Verydarkgrayishblue);
+}
+
+
+#testimonial-3{
+    grid-area: test-3;
+    background-color: var(--White);
+    color: black;
+}
+
+#testimonial-4{
+    grid-area: test-4;
+    background-color: var(--White);
+    color: black;
+}
+
+#testimonial-5{
+    grid-area: test-5;
+    background-color: var(--Verydarkblackishblue);
+}
+
+.header-text h1{
+    margin: 0;
+}
+
+p.heading{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+p.status{
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 50%;
+}
+
+.profile_pic{
+    height: 40px;
+    width: auto;
+    border-radius: 100%;
+    float: left;
+    margin-right: 18px;
+    border: 2px solid var(--Moderateviolet);
+}
+
+.text_top{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.text_bottom{
+    font-weight: 500;
+    opacity: 70%;
+    line-height: 1.75;
+    margin-top:25px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width:1404px){
+
+    .testimonial-container{
+        grid-template-rows:540px 360px 500px ;
+        grid-template-areas: 
+        "test-1 test-1 test-3 test-3"
+        "test-4 test-4 test-2 test-2"
+        ". test-5 test-5 ."
+        
+        ;
+    }
+
+    #testimonial-1::before{
+ 
+       content: none;
+    
+    }
+
+}
+
+
+@media only screen and (max-width:1129px){
+
+    .testimonial-container{
+        grid-template-rows:390px 400px 360px 400px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "test-1 test-1 test-1 test-1"
+        "test-2 test-2 test-4 test-4"
+        "test-5 test-5 test-5 test-5"
+        "test-3 test-3 test-3 test-3"
+        
+        
+        ;
+    }
+
+    #testimonial-1::before{
+ 
+       content: none;
+    
+    }
+
+}
+
+
+
+@media only screen and (max-width:876px){
+
+    .testimonial-container{
+        grid-template-rows:580px 390px 360px 560px 650px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "test-1 test-1 test-1 test-1"
+        "test-2 test-2 test-2 test-2"
+        "test-4 test-4 test-4 test-4"
+        "test-5 test-5 test-5 test-5"
+        "test-3 test-3 test-3 test-3"
+        
+        
+        
+        ;
+    }
+
+    #testimonial-1::before{
+ 
+       content: none;
+    
+    }
+
+    footer{
+        position: relative;
+        top: 50px;
+    }
+
+}
+
+
+@media only screen and (max-width:543px){
+
+    .testimonial-container{
+        grid-template-rows:23% 14% 12% 22% 29%;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "test-1 test-1 test-1 test-1"
+        "test-2 test-2 test-2 test-2"
+        "test-4 test-4 test-4 test-4"
+        "test-5 test-5 test-5 test-5"
+        "test-3 test-3 test-3 test-3"
+        
+        
+        
+        ;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 0;
+        padding-right: 0;
+}
+    
+
+    #testimonial-1::before{
+ 
+       content: none;
+    
+    }
+
+    footer{
+        display: none;
+        
+    }
+
+}
+
+
+
+
+
+
